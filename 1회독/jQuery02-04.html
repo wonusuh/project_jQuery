@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>제이쿼리 클래스 선택자</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script>
+      $(document).ready(() => {
+        $(".tomato").css({
+          "border-top": "3px dotted tomato",
+          background: "beige",
+          disply: "inline-block"
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="tomato">제이쿼리 입문</h1>
+    </header>
+    <main>
+      <p>제이쿼리 입문을 환엽합니다.</p>
+      <p>제이쿼리는 <span class="tomato">쉽습니다.</span></p>
+    </main>
+  </body>
+</html>
