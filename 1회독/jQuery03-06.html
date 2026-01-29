@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>title</title>
+
+    <style>
+      html,
+      body {
+        box-sizing: border-box;
+      }
+
+      #layout {
+        width: 650pt;
+        margin: auto;
+      }
+
+      #fruits button {
+        display: block;
+        padding: 2pt 5pt;
+        margin-bottom: 10pt;
+        border-radius: 3pt;
+      }
+
+      #fruits ul {
+        list-style: none;
+        padding-left: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="layout">
+      <h1>fadeTo() 메서드</h1>
+      <section id="fruits">
+        <button type="button">좋아하는 과일 3가지</button>
+        <ul>
+          <li>딸기</li>
+          <li>파인애플</li>
+          <li>키위</li>
+        </ul>
+      </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        const $li = $("#fruits li");
+        $li.eq(1).hide();
+
+        $("#fruits button").click(() => {
+          $li.eq(0).fadeTo("fast", 0.6);
+          $li.eq(1).toggle();
+          $li.eq(2).toggle();
+        });
+      });
+    </script>
+  </body>
+</html>

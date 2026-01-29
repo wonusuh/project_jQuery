@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>title</title>
+
+    <style>
+      html,
+      body {
+        box-sizing: border-box;
+      }
+
+      #layout {
+        width: 100%;
+        margin: auto;
+      }
+
+      #firstSection > img {
+        width: 100%;
+        border-radius: 10pt;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="layout">
+      <h1>hide() 메서드</h1>
+      <section id="firstSection">
+        <h2>이미지를 클릭하면 이미지가 숨겨집니다.</h2>
+        <img src="flower.jpg" alt="벚꽃 이미지" />
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        // 숨기기 이벤트
+        $("#firstSection>img").click((e) => {
+          $(e.target).hide();
+        });
+
+        // 드러내기 이벤트
+      });
+    </script>
+  </body>
+</html>
