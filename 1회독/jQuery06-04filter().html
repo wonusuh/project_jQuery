@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>filter()</title>
+
+    <style>
+      #fruits {
+        max-width: 500px;
+        margin: auto;
+        border: 5px solid #eee;
+        padding: 10px 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="fruits">
+      <input
+        id="txt"
+        type="text"
+        placeholder="과일이름을 기재하세요."
+      /><br />
+      <section>
+        <h1>과일 목록</h1>
+        <p>사과</p>
+        <p>딸기</p>
+        <p>포도</p>
+        <p>오렌지</p>
+        <p>파인</p>
+      </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        $("#txt").on("keyup", (e) => {
+          let txt = $(e.target).val();
+
+          // 과일 목록 글자를 필터링 함
+          $("#fruits section p").filter((i, el) => {
+            const isMatch = $(el).text().indexOf(txt) > -1;
+            $(el).toggle(isMatch);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
