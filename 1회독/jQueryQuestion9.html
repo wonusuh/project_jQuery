@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>title</title>
+
+    <style>
+      input {
+        display: block;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="#" method="post">
+      <input type="text" placeholder="홍길동" />
+      <input type="email" placeholder="이메일" required />
+      <button>확 인</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+      const initialize = async () => {
+        $("form [type='text']").prop("disabled", true);
+        $("form [type='email']").prop("disabled", false);
+      };
+
+      $(document).ready(() => {
+        initialize();
+      });
+    </script>
+  </body>
+</html>

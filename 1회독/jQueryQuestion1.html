@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>title</title>
+  </head>
+
+  <body>
+    <p>특정 클래스 설정 여부 테스트 중</p>
+    <p class="narin">특정 클래스 설정 여부 테스트 중</p>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+      const checkNarin = (e) => {
+        const isNarin = $(e.target).hasClass("narin");
+
+        if (!isNarin) {
+          return;
+        }
+
+        $(e.target).css({
+          background: "pink"
+        });
+      };
+
+      $(document).ready(() => {
+        $("p").on("click", checkNarin);
+      });
+    </script>
+  </body>
+</html>

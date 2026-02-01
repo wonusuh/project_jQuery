@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>title</title>
+
+    <style></style>
+  </head>
+
+  <body>
+    <button type="button">GET 요청을 보내고 결과 받기</button>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+      const onClick = () => {
+        $.get("native_dom.text", async (i, j) => {
+          alert(
+            "get()으로 받은 데이터 내용은 [" + i + "]\n실행상태 : " + j
+          );
+        });
+      };
+
+      $(document).ready(() => {
+        $("button").on("click", onClick);
+      });
+    </script>
+  </body>
+</html>

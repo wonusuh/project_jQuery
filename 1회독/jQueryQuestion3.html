@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>title</title>
+  </head>
+
+  <body>
+    <section id="dream">
+      <h2>지정 영역에서 특정 요소 찾기</h2>
+      <p><b>하늘꿈</b> 출판사</p>
+      <address>서울시 서초대로 112</address>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        const $b = $("#dream").find("b");
+
+        if (!$b) {
+          return;
+        }
+
+        $b.css({
+          backgroundColor: "red"
+        });
+      });
+    </script>
+  </body>
+</html>
