@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>title</title>
+
+    <style></style>
+  </head>
+
+  <body>
+    <form action="#" method="post">
+      <input type="checkbox" name="myfruits" id="apple" />
+      <label for="apple">사과</label><br />
+      <input type="checkbox" name="myfruits" id="tomato" />
+      <label for="tomato">토마토</label><br />
+      <input type="checkbox" name="myfruits" id="kiwi" />
+      <label for="kiwi">키위</label><br />
+      <input type="checkbox" name="myfruits" id="grape" />
+      <label for="grape">포도</label><br />
+      선택한 과일들 : <input type="text" name="myfruits" />
+    </form>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+      const onChange = () => {
+        let x = $("input:checked+label").text();
+        $("[type='text']").val(x);
+        alert(x);
+      };
+
+      const initialize = () => {
+        $("#apple").prop("checked", true);
+        $("[type='checkbox']").on("change", onChange);
+      };
+
+      $(document).ready(() => {
+        initialize();
+      });
+    </script>
+  </body>
+</html>
