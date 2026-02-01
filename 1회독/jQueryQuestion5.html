@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>title</title>
+
+    <style>
+      .skyblue {
+        background: skyblue;
+        padding: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="#narin.pub">
+      <h2>텍스트를 입력받아서 사용하기</h2>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        $("#" + $.escapeSelector("#narin.pub"))
+          .children("h2")
+          .addClass("skyblue");
+      });
+    </script>
+  </body>
+</html>

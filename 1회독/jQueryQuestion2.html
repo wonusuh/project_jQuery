@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>title</title>
+
+    <style>
+      #pub {
+        display: none;
+        color: dodgerblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2 id="pub">숨겨진 요소를 찾아서 보이게 하라</h2>
+    <section>특정 클래서 설정 여부 테스트 중</section>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        const isPubExist = $("#pub").length > 0;
+
+        //
+        if (!isPubExist) {
+          return;
+        }
+
+        $("#pub").show();
+      });
+    </script>
+  </body>
+</html>

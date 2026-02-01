@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>title</title>
+
+    <style>
+      .skyblue {
+        background: skyblue;
+        padding: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="fruits">
+      <h2>목록</h2>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+      </ul>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        const $thirdLi = $("#fruits ul li").eq(3 - 1);
+        $thirdLi.addClass("skyblue");
+      });
+    </script>
+  </body>
+</html>
